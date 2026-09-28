@@ -294,6 +294,15 @@ value="50">' +
 dem Hochwasser.</p>';
 container.append(compareFalseHTML);
 }
+      // Vorher-Nachher-Slider
+$('#contents').on('input', '.image-compare-slider', function()
+{
+var position = $(this).val();
+$(this)
+.prev('.image-compare')
+.find('.image-compare-after')
+.css('width', position + '%');
+});
       $('#contents').append(container);
 
     }
